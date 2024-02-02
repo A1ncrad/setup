@@ -1,5 +1,10 @@
+git config --global user.name="A1ncrad"
+git config --global user.email="74133903+A1ncrad@users.noreply.github.com"
+
+
 winget install Microsoft.WindowsTerminal
 winget install nodejs
+corepack enable
 
 winget install vscode 
 code
@@ -7,6 +12,11 @@ code
 winget install Mozilla.Firefox
 firefox
 
+
+winget install KeePassXCTeam.KeePassXC
+$keepass = 'C:\Program Files\KeePassXC';
+[Environment]::SetEnvironmentVariable("Path", $env:Path + ";" + $keepass, "Machine")
+keepassxc
 
 
 winget install Telegram.TelegramDesktop 
@@ -34,10 +44,9 @@ New-ItemProperty -Path $kbLayout -Name "Scancode Map" -PropertyType Binary -Valu
 
 
 wsl --install
-corepack --enable
-
-
 
 cd ..
-rm *.lnk setup start.bat
-exit
+rm *.lnk, setup, start.bat
+
+pause 
+shutdown /r
