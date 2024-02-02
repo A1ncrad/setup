@@ -4,36 +4,40 @@ git config --global user.email="74133903+A1ncrad@users.noreply.github.com"
 
 winget install Microsoft.WindowsTerminal
 winget install nodejs
-corepack enable
+start cmd /k corepack enable
 
 winget install vscode 
-code
+start cmd /k code
 
 winget install Mozilla.Firefox
-firefox
+start cmd /k firefox
 
 
 winget install KeePassXCTeam.KeePassXC
 $keepass = 'C:\Program Files\KeePassXC';
 [Environment]::SetEnvironmentVariable("Path", $env:Path + ";" + $keepass, "Machine")
+$env:path = $env:path + ";" + $keepass;
 keepassxc
 
 
 winget install Telegram.TelegramDesktop 
 $telegram = 'C:\Users\timur\AppData\Roaming\Telegram Desktop';
 [Environment]::SetEnvironmentVariable("Path", $env:Path + ";" + $telegram, "Machine")
+$env:path = $env:path + ";" + $telegram;
 telegram
 
 
 winget install Valve.Steam 
 $steam = 'C:\Program Files (x86)\Steam';
 [Environment]::SetEnvironmentVariable("Path", $env:Path + ";" + $steam, "Machine")
+$env:path = $env:path + ";" + $steam;
 steam
 
 
 winget install Discord.Discord
 $discord = 'C:\Users\timur\AppData\Local\Discord'
 [Environment]::SetEnvironmentVariable("Path", $env:Path + ";" + $discord, "Machine")
+$env:path = $env:path + ";" + $discord;
 discord
 
 

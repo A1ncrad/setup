@@ -17,7 +17,7 @@ void loop() {
 
   DigiKeyboard.delay(1000);
   DigiKeyboard.println("winget install Git.Git");
-  DigiKeyboard.println("[Environment]::SetEnvironmentVariable(\"Path\", $env:Path + \";C:\\Program Files\\Git\\bin\\;C:\\Program Files\\Git\\cmd\\\" , \"Machine\")");
+  DigiKeyboard.println("$env:path = $env:path + \";C:\\Program Files\\Git\\bin\\;C:\\Program Files\\Git\\cmd\\\"");
   DigiKeyboard.println("git clone https://github.com/A1ncrad/setup.git");
   DigiKeyboard.println("cd setup");
   DigiKeyboard.println("./setup.bat");
